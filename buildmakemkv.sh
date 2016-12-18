@@ -35,8 +35,8 @@ make
 checkinstall make install
 
 cd ../$bin_folder
-#if you want to disable "type 'yes' if you agree to license" enable this line:
-#sed -i -e 's/exit [[:digit:]]/exit 0/g' src/ask_eula.sh
+#to disable "type 'yes' if you agree to license" (otherwise the docker build will fail):
+sed -i -e 's/exit [[:digit:]]/exit 0/g' src/ask_eula.sh
 
 make
 checkinstall make install
@@ -49,6 +49,7 @@ rm $oss_zip
 #rm -rf $oss_folder
 #rm -rf $bin_folder
 
+set +x
 echo "You might want to do this now;"
 echo "#1. exit the docker container:"
 echo "	  $ exit"
