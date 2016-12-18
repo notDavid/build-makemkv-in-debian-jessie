@@ -50,14 +50,13 @@ rm $oss_zip
 #rm -rf $bin_folder
 
 set +x
+clear
 echo "You might want to do this now;"
-echo "#1. exit the docker container:"
-echo "	  $ exit"
-echo "#2. on the host, execute:"
-echo "	  $ mkdir ~/tmp ; docker run -t -i -v $HOME/tmp:/data docker-makemkv bash"
-echo "#3. in the docker container, execute: "
-echo "    $ cp /root/makemkv_sources/makemkv-oss-*/makemkv-oss_*.deb /data/"
-echo "    $ cp /root/makemkv_sources/makemkv-bin-*/makemkv-bin_*.deb /data/"
-echo "    $ exit"
-echo "#4. on the host, you can now install makemkv by running:"
-echo "	  $ dpkg -i ~/tmp/makemkv-oss_*.deb && dpkg -i ~/tmp/makemkv-bin_*.deb"
+echo "#1. on the host, execute:"
+echo "mkdir ~/tmp ; docker run -t -i -v $HOME/tmp:/data docker-makemkv bash"
+echo "#2. in the docker container, execute: "
+echo "cp /root/makemkv_sources/makemkv-oss-*/makemkv-oss_*.deb /data/"
+echo "cp /root/makemkv_sources/makemkv-bin-*/makemkv-bin_*.deb /data/"
+echo "exit"
+echo "#3. on the host, you can now install makemkv by running:"
+echo "dpkg -i ~/tmp/makemkv-oss_*.deb && dpkg -i ~/tmp/makemkv-bin_*.deb"
