@@ -5,7 +5,7 @@ set -x
 PATH="$HOME/bin:$PATH"
 
 apt-get update && apt-get -y upgrade
-apt-get -y install checkinstall build-essential pkg-config libc6-dev libssl-dev libexpat1-dev libavcodec-dev libgl1-mesa-dev libqt4-dev wget less tar grep sudo sed #vim
+apt-get -y install checkinstall build-essential pkg-config libc6-dev libssl-dev libexpat1-dev libavcodec-dev libgl1-mesa-dev libqt4-dev libz-dev wget less tar grep sudo sed #vim
 
 # Fix for bug 'checkinstall fails to create directories: https://bugs.launchpad.net/ubuntu/+source/checkinstall/+bug/815506'
 sed -i -e 's/TRANSLATE=1/TRANSLATE=0/g' /etc/checkinstallrc
